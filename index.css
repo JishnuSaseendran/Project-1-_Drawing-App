@@ -1,0 +1,47 @@
+body {
+	background-color :yellow;
+}
+
+canvas{
+    position: relative;
+    background-color :white;
+    top: 2px;
+    left:135px;
+    border: 1px solid gray;
+}
+
+#controls{
+    height: 668px;
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left:0;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    
+}
+
+#fillColor, #backgroundColor, #strokeColor{
+    border:0;
+    padding:0;
+    margin:0;
+    cursor: pointer;
+}
+
+#clearCanvas{
+    cursor: pointer;
+    margin-left: 40%;
+}
+#clearCanvas: hover { opacity: 0.5; }
+
+
+
+
+
+
+#clearCanvas {
+    margin-top: 30px;
+}
+
+

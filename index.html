@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drawing App</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+0<canvas id="canvas" width="1211" height="660"></canvas>
+
+<div id="controls">
+    <p><label>Fill: <input id="fillBox" type="checkbox" checked="checked"></label></p>
+
+    <div class="lightBorder">
+        <p><label>Fill Color:' ' <input id="fillColor" type="color" value="#24B0D5"></label></p>
+        <p><label>Fill Canvas: <input id="backgroundColor" type="color" value="#FFFFFF"></label></p>
+        <p><label>Line Color:'  <input id="strokeColor" type="color"></label></p>
+    </div>
+
+    <div class="lightBorder">
+        <p><label>Line Width: <input id="lineWidth" type="range" step="1" min="1" max="200" value="4"></label></p>
+    </div>
+
+    <div class="lightBorder">
+        <p><input type="radio" name="shape" value="line" checked="checked">Line</p>
+        <p><input type="radio" name="shape" value="circle">Circle</p>
+    </div>
+
+    <p><label>Polygon Sides: <input id="polygonSides" type="range" step="1" min="3" max="10"></label></p>
+    <p><label>Polygon Angle: <input id="polygonAngle" type="range" step="22.5" min="0" max="90"></label></p>
+
+    <div id="clearCanvas">
+        <img src="reset.png" width="30" height="30" />
+    </div>
+
+</div>
+
+</body>
+</html>
