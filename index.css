@@ -5,20 +5,20 @@ body {
 canvas{
     position: relative;
     background-color :white;
-    top: 2px;
+    top: 45px;
     left:135px;
     border: 1px solid gray;
 }
 
 #controls{
-    height: 668px;
+    height: 618px;
     width: 140px;
     position: absolute;
-    top: 0;
+    top: 50px;
     left:0;
     padding: 5px;
     color: white;
-    background-color: black;
+    background-color :black;
     
 }
 
@@ -37,11 +37,65 @@ canvas{
 
 
 
-
-
-
-#clearCanvas {
-    margin-top: 30px;
+.lightBorder {
+    border: 2px solid yellow;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+p{
+    margin: 4px;
+}
+
+#clearCanvas {
+    margin-top: 20px;
+}
+
+h2{
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-left:15px;
+    color: yellow;
+}
+h3{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left:40px;
+    color: yellow;
+}
+h4{
+    margin-top: 2px;
+    margin-left:45px;
+    color: yellow;
+}
+
+
+#tools{
+    position:fixed;
+    height: 50px;
+    width: 100%;
+    float: left;  
+    top: 0;
+    left:0;
+    
+    display: inline-block;
+    
+    background-image : url("./images/1.jpg");
+    
+}
+
+h5{
+    float: left;
+    color: yellow;
+    margin-top: 2px;
+}
+h1{
+	text-align:center;
+        font-style: italic;
+    	font-size: xx-large;
+    	font-family: sans-serif;
+    	color: yellow;
+        margin-top: 7px;
+	
+}
 

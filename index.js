@@ -33,13 +33,34 @@ function drawCircle(position) {
     context.arc(dragStartLocation.x, dragStartLocation.y, radius, 0, 2 * Math.PI, false);
 }
 
+function drawPolygon(position, sides, angle) {
+    var coordinates = [],
+        radius = Math.sqrt(Math.pow((dragStartLocation.x - position.x), 2) + Math.pow((dragStartLocation.y - position.y), 2)),
+        index = 0;
 
+    for (index = 0; index < sides; index++) {
+        coordinates.push({x: dragStartLocation.x + radius * Math.cos(angle), y: dragStartLocation.y - radius * Math.sin(angle)});
+        angle += (2 * Math.PI) / sides;
+    }
+
+    context.beginPath();
+    context.moveTo(coordinates[0].x, coordinates[0].y);
+    for (index = 1; index < sides; index++) {
+        context.lineTo(coordinates[index].x, coordinates[index].y);
+    }
+
+    context.closePath();
+}
 
 function draw(position) {
 
     var fillBox = document.getElementById("fillBox"),
         shape = document.querySelector('input[type="radio"][name="shape"]:checked').value,
-        
+        polygonSides = document.getElementById("polygonSides").value,
+        polygonAngle = document.getElementById("polygonAngle").value,
+        lineCap = document.querySelector('input[type="radio"][name="lineCap"]:checked').value;
+
+    context.lineCap = lineCap;
 
     if (shape === "circle") {
         drawCircle(position);
@@ -88,6 +109,22 @@ function changeLineWidth() {
     event.stopPropagation();
 }
 
+function changeFillStyle() {
+    context.fillStyle = this.value;
+    event.stopPropagation();
+}
+
+function changeStrokeStyle() {
+    context.strokeStyle = this.value;
+    event.stopPropagation();
+}
+
+function changeBackgroundColor() {
+    context.save();
+    context.fillStyle = document.getElementById("backgroundColor").value;
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.restore();
+}
 
 function eraseCanvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
